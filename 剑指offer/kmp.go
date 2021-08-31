@@ -5,11 +5,11 @@ import (
 )
 
 func main() {
-	mainString := "123456123456x"
+	mainString := "123451237123"
 
 	subString := "123451238123"
 
-	fmt.Println("子串在主串中第一次出现的位置", KMP(mainString, subString))
+	fmt.Println("\n子串在主串中第一次出现的位置", KMP(mainString, subString))
 }
 
 /**
@@ -30,10 +30,8 @@ func getNext(T string) [20]int {
 			i++
 			if T[i] == T[j] {
 				next[i] = next[j]
-				//nextstring[i] = fmt.Sprintf("%c %2d  nest[j=%d] ",T[i],next[j],j)
 			} else {
 				next[i] = j
-				//nextstring[i] = fmt.Sprintf("%c  j = %2d ",T[i],j)
 			}
 		} else {
 			j = next[j]
