@@ -13,7 +13,7 @@ func reversrList(head *ListNode) *ListNode {
 	cur := head
 	var pre *ListNode = nil
 	for cur != nil {
-		pre, cur, cur.Next = cur, cur.Next, pre //这句话最重要
+		cur, cur.Next, pre = cur.Next, pre, cur
 	}
 	return pre
 }
@@ -33,7 +33,11 @@ func main() {
 	ln2.Next = ln3
 	ln3.Next = ln4
 	ln4.Next = ln5
-
 	pre := reversrList(head)
-	fmt.Println(pre)
+	for pre.Next != nil {
+		fmt.Println(pre.Val)
+		pre = pre.Next
+	}
+	fmt.Println(pre.Val)
+
 }
