@@ -18,7 +18,7 @@ func reversrList(head *ListNode) *ListNode {
 	return pre
 }
 
-func main() {
+func Main() {
 	head := new(ListNode)
 	head.Val = 1
 	ln2 := new(ListNode)
