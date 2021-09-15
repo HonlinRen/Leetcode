@@ -8,7 +8,7 @@ import (
 
 
 func Test067(t *testing.T) {
-	str := " ++0123456123456798"
+	str := "-2147483641"
 
 	fmt.Println(myAtoi(str))
 }
@@ -46,13 +46,13 @@ func myAtoi(s string) int {
 		if v < '0' || v > '9' {
 			break
 		}
-		if negative { //负数
-			if -i < (math.MinInt32+(v-'0'))/10 {
+		if negative{
+			if -i < (math.MinInt32 + (v - '0'))/10{
 				i = math.MinInt32
 				break
 			}
-		} else {
-			if i > (math.MaxInt32-(v-'0'))/10 {
+		}else {
+			if i > (math.MaxInt32 - (v - '0'))/10{
 				i = math.MaxInt32
 				break
 			}
